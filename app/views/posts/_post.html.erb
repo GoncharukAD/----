@@ -2,6 +2,7 @@
   <td><%= post.title %></td>
   <td><%= post.body %></td>
   <td><%= button_to t('.edit'), edit_post_path(post)%></td>
+  <td><%= button_to t('.show'), edit_post_path(post)%></td>
   <td>
     <%= button_to t('.delete'),
     posts_path(post.id),

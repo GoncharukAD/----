@@ -13,12 +13,12 @@ class PostsController < ApplicationController
   def show; end
 
   def update
-    @post.update ? (redirect_to @post) : (render :edit)
+    @post.update ? (redirect_to @post, notice: t('.success_update')) : (render :edit)
   end
 
   def destroy
     @posts.destroy
-    redirect_to posts_path
+    redirect_to posts_path, notice: t('.success_delete')
   end
 
   def new
@@ -28,7 +28,7 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.build(post_params)
     if @post.save
-      redirect_to @post
+      redirect_to @post, notice: t('.success_create')
     else
       render :new
     end
