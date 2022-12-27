@@ -1,7 +1,7 @@
-<h1><%= t('.header', title: @post.title) %></h1>
+<h1><%= @post.title %></h1>
 
 <h2><%= @post.body %></h2>
 
 
-<%= link_to t('.edit'), edit_post_path(@post) %>
-<%= link_to t('.back'), posts_path %>
+<%= button_to t('.edit'), edit_post_path(@post) %>
+<%= button_to t('.back'), posts_path %>

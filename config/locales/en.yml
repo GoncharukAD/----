@@ -33,43 +33,42 @@ en:
   hello: "Hello world"
 
 
-shared:
-  errors:
-    header:
-      one: '%{count} error detected'
-      others: '%{count} errors detected'
-  signed_in:
-    welcome: 'Welcome, %{name}'
-    back: 'Back'
-  navbar:
-    welcome: 'Welcome'
-    logout: 'Log out'
-    login: 'Log in'
-    signup: 'Sign up'
+  shared:
+    errors:
+      header:
+        one: '%{count} error detected'
+        others: '%{count} errors detected'
+    signed_in:
+      welcome: 'Welcome, %{name}'
+      back: 'Back'
+    navbar:
+      welcome: 'Welcome'
+      logout: 'Log out'
+      login: 'Log in'
+      signup: 'Sign up'
 
-posts:
-  success_create: 'Post created successfully'
-  success_update: 'Post successfully updated'
-  success_delete: 'Post successfully deleted'
-  not_found: 'Post not found'
-  post:
-    delete: 'Delete'
-    show: 'Show'
-    edit: 'Edit'
-    confirm: 'Are you sure?'
-  index:
-    header: 'All posts'
-    title: 'Post title'
-    body:  'Post body'
-    actions: 'Possible actions'
-    new_post: 'Create New Post'
-    form_inline:
-    submit: 'Ok'
-  show:
-    header: '%{title} Post'
-    back: 'Back'
-    edit: 'Edit'
-  new:
-    new_post: 'Create new post'
-  edit:
-    edit: ' Edit %{title} Post'
+  posts:
+    success_create: 'Post created successfully'
+    success_update: 'Post successfully updated'
+    success_delete: 'Post successfully deleted'
+    not_found: 'Post not found'
+    post:
+      delete: 'Delete'
+      show: 'Show'
+      edit: 'Edit'
+      confirm: 'Are you sure?'
+    index:
+      header: 'All posts'
+      title: 'Post title'
+      body:  'Post body'
+      actions: 'Possible actions'
+      new_post: 'Create New Post'
+      form_inline:
+      submit: 'Ok'
+    show:
+      back: 'Back'
+      edit: 'Edit'
+    new:
+      new_post: 'Create new post'
+    edit:
+      edit: ' Edit %{title} Post'

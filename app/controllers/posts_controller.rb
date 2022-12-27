@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_post, only: %i[edit update destroy]
+  before_action :set_post, only: %i[edit update show destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_post_not_found
 

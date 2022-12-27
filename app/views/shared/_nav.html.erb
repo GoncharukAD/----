@@ -1,0 +1,14 @@
+<nav class="navbar navbar-light bg-light">
+  <%= link_to 'Blog', root_path, class: "navbar-brand" %>
+  <span class="navbar-text">
+   <% if user_signed_in? %>
+      <%= t('.welcome')%>, <b><%= current_user.username || current_user.email  %></b>
+      <button type="button" class="btn btn-outline-dark btn-sm">
+      <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
+      </button>
+    <% else %>
+      <%= link_to t('.login'), new_session_path(resource_name) %>
+      <%= link_to t('.signup'), new_registration_path(resource_name) %>
+    <% end %>
+  </span>
+</nav>

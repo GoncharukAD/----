@@ -21,6 +21,9 @@ gem 'jbuilder', '~> 2.7'
 #Auth
 gem 'devise'
 
+#UI
+gem 'jquery-rails'
+gem 'bootstrap', '~> 5.2.2'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

@@ -1,16 +1,19 @@
-<div class="container">
+<div class="row justify-content-center w-100">
   <h1><%= t('.header') %></h1>
 
-  <p>
-    <%= link_to t('.new_post'), new_post_path %>
-  </p>
-
-  </div>
-
-  <table class="table">
+  <table class="table table-sm table-bordered">
     <tr>
-      <th scope="col"><%= t('.title') %></th>
-      <th scope="col"><%= t('.body') %></th>
+      <button type="button" class="btn btn-outline-success">
+        <%= link_to t('.new_post'), new_post_path %>
+      </button>
+    <tr>
+    <tr>
+      <th class="pointer align-middle text-center" scope="col">
+      <%= t('.title') %>
+      </th>
+      <th class="pointer align-middle text-center" scope="col">
+        <%= t('.body') %>
+      </th>
       <th colspan="3"><%= t('.actions') %></th>
     </tr>
 
