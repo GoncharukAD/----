@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_post, only: %i[edit update destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_post_not_found
@@ -8,6 +9,8 @@ class PostsController < ApplicationController
   end
 
   def edit; end
+
+  def show; end
 
   def update
     @post.update ? (redirect_to @post) : (render :edit)
@@ -23,7 +26,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = current_user.post.build(post_params)
+    @post = current_user.posts.build(post_params)
     if @post.save
       redirect_to @post
     else
