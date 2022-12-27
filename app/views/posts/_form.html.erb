@@ -1,0 +1,15 @@
+<%= form_with model: [:posts], local: true do |form|  %>
+  <%= render 'shared/errors', resource: @post %>
+
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title, id: :post_title %>
+  </p>
+
+  <p>
+    <%= form.label :body %><br>
+    <%= form.number_field :level, id: :post_body %>
+  </p>
+
+  <p><%= form.submit %></p>
+<% end %>

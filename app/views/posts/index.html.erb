@@ -1,0 +1,19 @@
+<div class="container">
+  <h1><%= t('.header') %></h1>
+
+  <p>
+    <%= link_to t('.new_post'), new_post_path %>
+  </p>
+
+  </div>
+
+  <table class="table">
+    <tr>
+      <th scope="col"><%= t('.title') %></th>
+      <th scope="col"><%= t('.body') %></th>
+      <th colspan="4"><%= t('.actions') %></th>
+    </tr>
+
+    <%= render @posts %><br>
+  </table>
+</div>
